@@ -2995,7 +2995,8 @@ static Expr* tryParseGenericApp(Parser* parser, Expr* base)
             }
         }
 
-        if (as<MemberExpr>(base) && (as<DeclRefExpr>(checkedBase) || as<OverloadedExpr>(checkedBase)))
+        if (as<MemberExpr>(base) &&
+            (as<DeclRefExpr>(checkedBase) || as<OverloadedExpr>(checkedBase)))
         {
             base = checkedBase;
         }
